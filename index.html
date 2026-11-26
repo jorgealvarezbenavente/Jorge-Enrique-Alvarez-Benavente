@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jorge Enrique Alvarez Benavente | Página personal</title>
+<meta name="description" content="Página personal de Jorge Enrique Alvarez Benavente, estudiante de Administración de Negocios en la Universidad Católica San Pablo. Finanzas y marketing digital.">
+<meta name="theme-color" content="#0d1613">
+<meta property="og:title" content="Jorge Enrique Alvarez Benavente">
+<meta property="og:description" content="Estudiante de Administración de Negocios interesado en finanzas y marketing digital.">
+<meta property="og:image" content="perfil.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0d1613; --bg2:#13211c; --card:#182922; --text:#f4efe4; --muted:#a9b8ae; --line:#27403a;
+  --amber:#ffb42e; --teal:#2fd9b8; --coral:#ff6f4e;
+  --display:"Fraunces",Georgia,serif; --sans:"DM Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:1.075rem;line-height:1.7}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{color:var(--amber)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:3px}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1.4rem}
+.skip{position:absolute;left:-999px;background:var(--amber);color:#111;padding:.5rem 1rem;z-index:30}
+.skip:focus{left:0}
+header{position:sticky;top:0;z-index:20;background:rgba(13,22,19,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:.75rem;padding-bottom:.75rem}
+.logo{font-family:var(--display);font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none}
+.logo b{color:var(--amber)}
+nav ul{display:flex;gap:1.2rem;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-weight:500;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--amber)}
+.hero{padding:4.5rem 0 5rem;background:radial-gradient(60rem 30rem at 85% 10%,rgba(255,180,46,.16),transparent 60%),radial-gradient(40rem 25rem at 0% 90%,rgba(47,217,184,.12),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:3.5rem;align-items:center}
+.tag{display:inline-block;color:var(--teal);font-weight:700;margin:0 0 1.2rem}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.7rem,7vw,5.2rem);line-height:1;letter-spacing:-.025em;margin:0 0 1.5rem}
+h1 em{font-style:italic;font-weight:600;color:var(--amber)}
+.hero p.intro{font-size:1.25rem;color:var(--muted);max-width:33rem;margin:0 0 2rem}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{font-weight:700;text-decoration:none;padding:.8rem 1.4rem;border-radius:999px;border:2px solid var(--amber);color:var(--amber)}
+.btn:hover{background:var(--amber);color:#111}
+.btn.solid{background:var(--amber);color:#111}
+.btn.solid:hover{background:var(--teal);border-color:var(--teal)}
+.photo{position:relative;justify-self:center;width:min(100%,22rem)}
+.photo::before{content:"";position:absolute;inset:1.4rem -1.4rem -1.4rem 1.4rem;border-radius:11rem 11rem 1.5rem 1.5rem;background:linear-gradient(160deg,var(--amber),var(--coral))}
+.photo img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:11rem 11rem 1.5rem 1.5rem;border:3px solid var(--bg)}
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+.kicker{font-family:var(--display);font-style:italic;font-weight:600;color:var(--coral);font-size:1.15rem;margin:0 0 .4rem}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;letter-spacing:-.015em;margin:0 0 1.6rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.about p{margin:0 0 1rem;color:var(--muted)}
+.about p:first-child{color:var(--text);font-size:1.2rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:var(--card);border-radius:1rem;padding:1.6rem;border-top:5px solid var(--amber)}
+.card:nth-child(2){border-color:var(--teal)}
+.card:nth-child(3){border-color:var(--coral)}
+.card .n{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1;color:var(--amber)}
+.card:nth-child(2) .n{color:var(--teal)}
+.card:nth-child(3) .n{color:var(--coral)}
+.card h3{font-family:var(--display);font-size:1.45rem;margin:.6rem 0 .4rem}
+.card p{margin:0;color:var(--muted)}
+.edu{border-left:4px solid var(--teal);padding:.2rem 0 .2rem 1.4rem}
+.edu b{font-family:var(--display);font-size:1.5rem;display:block}
+.edu span{color:var(--muted)}
+.tablebox{overflow-x:auto;border-radius:1rem;background:var(--card)}
+table{width:100%;border-collapse:collapse;min-width:38rem}
+caption{text-align:left;padding:1rem 1.2rem;color:var(--muted)}
+th,td{text-align:left;padding:.95rem 1.2rem;border-top:1px solid var(--line);vertical-align:top}
+th{font-weight:700;color:var(--amber);font-size:.95rem}
+td.c{font-family:var(--display);font-weight:800;font-size:1.15rem}
+.none{color:var(--muted);font-style:italic}
+.peers{display:grid;grid-template-columns:repeat(auto-fill,minmax(17rem,1fr));gap:.7rem;list-style:none;margin:1.4rem 0 0;padding:0}
+.peers a{display:block;padding:.7rem 1rem;background:var(--card);border:1px solid var(--line);border-radius:.7rem;color:var(--text);text-decoration:none;font-weight:500}
+.peers a:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px)}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:32rem;margin:0 auto 1.8rem}
+.mail{font-family:var(--display);font-weight:800;font-size:clamp(1.3rem,4vw,2.2rem);color:var(--amber);word-break:break-all}
+.contact .btns{justify-content:center;margin-top:1.6rem}
+footer{padding:2rem 0;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:.95rem}
+.reveal{animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (max-width:800px){
+  .hero .wrap,.about,.cards{grid-template-columns:1fr}
+  .photo{order:-1;width:min(78%,17rem)}
+  .hero{padding-top:3rem}
+}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none}html{scroll-behavior:auto}.peers a:hover{transform:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Jorge Enrique Alvarez Benavente","email":"jorgealbe1955@gmail.com","alumniOf":"Universidad Católica San Pablo","jobTitle":"Estudiante de Administración de Negocios","sameAs":["https://www.linkedin.com/in/jorge-alvarez-benavente-53a0a8321/","https://github.com/georgetown0202"]}
+</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#inicio">Jorge<b>.</b>Alvarez</a>
+    <nav aria-label="Principal"><ul>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#intereses">Intereses</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#companeros">Compañeros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="hero" id="inicio">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="tag">Estudiante de Administración de Negocios</p>
+      <h1>Jorge Enrique <em>Alvarez</em> Benavente</h1>
+      <p class="intro">Estudio en la Universidad Católica San Pablo, en Arequipa. Me interesan las finanzas y el marketing aplicados a la administración digital.</p>
+      <div class="btns">
+        <a class="btn solid" href="#sobre-mi">Conóceme</a>
+        <a class="btn" href="https://www.linkedin.com/in/jorge-alvarez-benavente-53a0a8321/" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/georgetown0202/Jorge-Enrique-Alvarez-Benavente" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="photo reveal"><img src="perfil.jpg" alt="Retrato ilustrado de Jorge Alvarez con saco azul en una oficina" width="640" height="800"></div>
+  </div>
+</div>
+
+<section id="sobre-mi">
+  <div class="wrap">
+    <p class="kicker">Una breve historia</p>
+    <h2>Sobre mí</h2>
+    <div class="about">
+      <div>
+        <p>Soy Jorge Enrique Alvarez Benavente, estudiante de Administración de Negocios. Quiero entender cómo se toman buenas decisiones económicas dentro de una empresa y cómo la tecnología cambia la forma de vender y de gestionar.</p>
+      </div>
+      <div>
+        <p>Dentro de la carrera me atraen dos áreas: las finanzas, para leer y planificar el dinero de un negocio, y el marketing digital, para llegar a los clientes con datos y no con intuición.</p>
+        <p>Este semestre combino cursos de computación y matemática con cursos de humanidades, que me ayudan a analizar los problemas desde varios ángulos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intereses" class="alt">
+  <div class="wrap">
+    <p class="kicker">Lo que me mueve</p>
+    <h2>Intereses y camino</h2>
+    <div class="cards">
+      <article class="card"><div class="n">01</div><h3>Finanzas</h3><p>Entender cómo se invierte, se ahorra y se planifica el dinero de una empresa.</p></article>
+      <article class="card"><div class="n">02</div><h3>Marketing digital</h3><p>Conectar con las personas usando datos, redes y herramientas en línea.</p></article>
+      <article class="card"><div class="n">03</div><h3>Administración digital</h3><p>Usar la tecnología para organizar equipos, procesos y negocios.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="formacion">
+  <div class="wrap">
+    <p class="kicker">Dónde estudio</p>
+    <h2>Formación</h2>
+    <div class="edu">
+      <b>Administración de Negocios</b>
+      <span><a href="https://www.ucsp.edu.pe/" rel="noopener">Universidad Católica San Pablo</a>, Arequipa, Perú. En curso desde 2026-02.</span>
+    </div>
+  </div>
+</section>
+
+<section id="cursos" class="alt">
+  <div class="wrap">
+    <p class="kicker">Semestre 2026-02</p>
+    <h2>Cursos y docentes</h2>
+    <div class="tablebox">
+      <table>
+        <caption>Cursos de la carrera que llevo este semestre, con su docente y perfil público.</caption>
+        <thead><tr><th scope="col">Curso</th><th scope="col">Docente</th><th scope="col">Perfil</th></tr></thead>
+        <tbody>
+          <tr><td class="c" rowspan="2">Introducción a la Computación</td><td>Ph.D. Ernesto Cuadros Vargas</td><td><a href="https://www.linkedin.com/in/ecuadrosv/" rel="noopener">LinkedIn</a></td></tr>
+          <tr><td>Dra. Rosmery Violeta Quispe Zavala</td><td><a href="https://pe.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638" rel="noopener">LinkedIn</a></td></tr>
+          <tr><td class="c">Historia de Occidente</td><td>Mario Rommel Arce Espinoza</td><td><a href="https://www.linkedin.com/in/mario-rommel-arce-espinoza-94585b19a/" rel="noopener">LinkedIn</a></td></tr>
+          <tr><td class="c">Cálculo</td><td>Maribel Marianela Quiroz Zegarra</td><td><a href="https://www.linkedin.com/in/maribel-marianela-8453a61a7/" rel="noopener">LinkedIn</a></td></tr>
+          <tr><td class="c">Antropología y Epistemología</td><td>Aldo Franco Giacchetti Pastor</td><td class="none">Sin perfil público de LinkedIn</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="companeros">
+  <div class="wrap">
+    <p class="kicker">Mi clase</p>
+    <h2>Compañeros</h2>
+    <p style="color:var(--muted);margin:0">Páginas web de compañeros del curso Introducción a la Computación.</p>
+    <ul class="peers">
+      <li><a href="https://alexiacayo19.github.io" rel="noopener">Alexia Alisson Cayo Ccasa</a></li>
+      <li><a href="https://andrea-yadhira-portafolio.vercel.app/" rel="noopener">Andrea Yadhira Paredes Meza</a></li>
+      <li><a href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/" rel="noopener">Breshia del Pilar Peralta Mamani</a></li>
+      <li><a href="https://carlosfabianhuarachihumora.github.io" rel="noopener">Carlos Fabian Huarachi Humora</a></li>
+      <li><a href="https://chiaraticona-source.github.io/chiara-ticona.github.io/" rel="noopener">Chiara Valentina Ticona Chata</a></li>
+      <li><a href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/" rel="noopener">Dominick Ray Apfata Llaque</a></li>
+      <li><a href="https://polarberto.github.io/EDGAR-SEBASTIAN-CALLE-TORRES/" rel="noopener">Edgar Sebastian Calle Torres</a></li>
+      <li><a href="https://eduardoisaacrojasjuarez.github.io" rel="noopener">Eduardo Isaac Rojas Juarez</a></li>
+      <li><a href="https://emelyanccari-ops.github.io" rel="noopener">Emely Mirella Anccari Lopez</a></li>
+      <li><a href="https://fernandagzcj.github.io/fernandagabrielazunigacamacho.github.io/" rel="noopener">Fernanda Zuñiga</a></li>
+      <li><a href="https://francoabdielsalinasrondon.github.io" rel="noopener">Franco Abdiel Salinas Rondon</a></li>
+      <li><a href="https://genesismollocondo-source.github.io/" rel="noopener">Génesis Xiomara Mollocondo Kana</a></li>
+      <li><a href="https://roachsanders.github.io/Gerald-Raphael-Vilca-Ramirez/" rel="noopener">Gerald Raphael Vilca Ramirez</a></li>
+      <li><a href="https://nayeliayta-dev.github.io/" rel="noopener">Nayeli Alexandra Ayta Asqui</a></li>
+      <li><a href="https://nayeliordonez.github.io/Nayeli-Ordonez-Asto/" rel="noopener">Nayeli Yadira Ordoñez Asto</a></li>
+      <li><a href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/" rel="noopener">Rafael Chirinos</a></li>
+      <li><a href="https://sebasochoa.github.io" rel="noopener">Sebastian Andre Ochoa Ortiz</a></li>
+      <li><a href="https://zafiroquispe-wq.github.io/" rel="noopener">Zafiro Shantal Quispe Alache</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contacto" class="alt contact">
+  <div class="wrap">
+    <p class="kicker">Hablemos</p>
+    <h2>Contacto</h2>
+    <p>Si quieres escribirme, mándame un correo o conecta conmigo en LinkedIn.</p>
+    <a class="mail" href="mailto:jorgealbe1955@gmail.com">jorgealbe1955@gmail.com</a>
+    <div class="btns">
+      <a class="btn solid" href="mailto:jorgealbe1955@gmail.com">Enviar correo</a>
+      <a class="btn" href="https://www.linkedin.com/in/jorge-alvarez-benavente-53a0a8321/" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/georgetown0202/Jorge-Enrique-Alvarez-Benavente" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Jorge Enrique Alvarez Benavente. Página personal.</div></footer>
+</body>
+</html>
